@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #274ac8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(152, 155, 163, 0.08);
+}
+
+.container::before {
+  width: 700px;
+  height: 700px;
+  top: -250px;
+  left: -250px;
+  box-shadow: 0 0 0 60px rgba(29, 76, 208, 0.03),
+              0 0 0 70px rgba(238, 239, 242, 0.08);
+}
+
+.container::after {
+  width: 700px;
+  height: 700px;
+  bottom: -250px;
+  right: -250px;
+  box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.03),
+              0 0 0 120px rgba(240, 240, 240, 0.02);
+}
+
+.box {
+  background: rgb(255, 253, 253);
+  border-radius: 14px;
+  padding: 45px 55px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2b2f36;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: #5b63d3;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 6px;
+}
+
+.button:hover {
+  background: #4850c4;
+}
+
+.button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.success {
+  color: green;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.error {
+  color: red;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.otp-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 25px;
+}
+
+.otp-input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+}
+
+.otp-input:focus {
+  border-color: #96979e;
+}
